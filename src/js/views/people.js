@@ -43,6 +43,9 @@ export class People extends React.Component {
 											name={e.name}
 											hairColor={e.hair_color}
 											eyeColor={e.eye_color}
+											image={
+												"https://img.purch.com/w/660/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzEwNC84MTkvb3JpZ2luYWwvY3V0ZS1raXR0ZW4uanBn"
+											}
 											height={e.height}
 											fade={true}
 											gender={e.gender}

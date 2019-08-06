@@ -32,6 +32,7 @@ export default class Example extends React.Component {
 					toggle={this.toggle}>
 					<PopoverHeader>{this.props.name}</PopoverHeader>
 					<PopoverBody>
+						<br />
 						Gender: {this.props.gender}
 						<br />
 						Hair color: {this.props.hairColor}
@@ -39,6 +40,8 @@ export default class Example extends React.Component {
 						Eye color: {this.props.eyeColor}
 						<br />
 						Height: {this.props.height}
+						<br />
+						<img src={this.props.image} width="170" height="120" />
 					</PopoverBody>
 				</Popover>
 			</div>
@@ -52,5 +55,6 @@ Example.propTypes = {
 	eyeColor: PropTypes.string,
 	gender: PropTypes.string,
 	height: PropTypes.number,
-	fade: PropTypes.bool
+	fade: PropTypes.bool,
+	image: PropTypes.string
 };
