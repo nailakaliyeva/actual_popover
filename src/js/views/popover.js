@@ -21,9 +21,9 @@ export default class Example extends React.Component {
 	render() {
 		return (
 			<div>
-				<Button id={"Popover-" + this.props.id} type="button">
-					{this.props.name}
-				</Button>
+				<li className="list-group-item d-flex justify-content-between">
+					<h6 id={"Popover-" + this.props.id}>{this.props.name}</h6>
+				</li>
 				<Popover
 					placement="bottom"
 					isOpen={this.state.popoverOpen}
