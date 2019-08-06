@@ -19,6 +19,9 @@ export default class Example extends React.Component {
 	}
 
 	render() {
+		let object = this.props.item;
+		let array = Object.keys(object);
+
 		return (
 			<div>
 				<li className="list-group-item d-flex justify-content-between">
@@ -32,15 +35,13 @@ export default class Example extends React.Component {
 					toggle={this.toggle}>
 					<PopoverHeader>{this.props.name}</PopoverHeader>
 					<PopoverBody>
-						<br />
-						Gender: {this.props.gender}
-						<br />
-						Hair color: {this.props.hairColor}
-						<br />
-						Eye color: {this.props.eyeColor}
-						<br />
-						Height: {this.props.height}
-						<br />
+						{array.map((key, i) => {
+							return (
+								<div key={i}>
+									{key}: {object[key]}
+								</div>
+							);
+						})}
 						<img src={this.props.image} width="170" height="120" />
 					</PopoverBody>
 				</Popover>
@@ -54,7 +55,8 @@ Example.propTypes = {
 	hairColor: PropTypes.string,
 	eyeColor: PropTypes.string,
 	gender: PropTypes.string,
-	height: PropTypes.number,
+	height: PropTypes.string,
 	fade: PropTypes.bool,
+	item: PropTypes.object,
 	image: PropTypes.string
 };
