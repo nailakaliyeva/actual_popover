@@ -41,6 +41,11 @@ export class People extends React.Component {
 											item={e}
 											id={i}
 											name={e.name}
+											hairColor={e.hair_color}
+											eyeColor={e.eye_color}
+											height={e.height}
+											fade={true}
+											gender={e.gender}
 											key={i}
 											className="list-group-item d-flex justify-content-between"
 											onClick={() => {

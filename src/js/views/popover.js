@@ -22,17 +22,23 @@ export default class Example extends React.Component {
 		return (
 			<div>
 				<li className="list-group-item d-flex justify-content-between">
-					<h6 id={"Popover-" + this.props.id}>{this.props.name}</h6>
+					<h5 id={"Popover-" + this.props.id}>{this.props.name}</h5>
 				</li>
 				<Popover
-					placement="bottom"
+					placement="right"
+					trigger="hover focus"
 					isOpen={this.state.popoverOpen}
 					target={"Popover-" + this.props.id}
 					toggle={this.toggle}>
-					<PopoverHeader>Popover Title</PopoverHeader>
+					<PopoverHeader>{this.props.name}</PopoverHeader>
 					<PopoverBody>
-						Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia
-						quam venenatis vestibulum.
+						Gender: {this.props.gender}
+						<br />
+						Hair color: {this.props.hairColor}
+						<br />
+						Eye color: {this.props.eyeColor}
+						<br />
+						Height: {this.props.height}
 					</PopoverBody>
 				</Popover>
 			</div>
@@ -41,5 +47,10 @@ export default class Example extends React.Component {
 }
 Example.propTypes = {
 	id: PropTypes.number,
-	name: PropTypes.string
+	name: PropTypes.string,
+	hairColor: PropTypes.string,
+	eyeColor: PropTypes.string,
+	gender: PropTypes.string,
+	height: PropTypes.number,
+	fade: PropTypes.bool
 };
