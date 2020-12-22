@@ -10,6 +10,10 @@
 $ npm install
 ```
 
+```
+$ npm install reactstrap
+```
+
 ## Start coding!
 
 Start the webpack server with live reload:
